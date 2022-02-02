@@ -2836,7 +2836,6 @@ body.search-is-visible {
   }
 
   .header__search-trigger {
-    background-image: url(../images/icons/icon-search-w.svg);
     height: 20px;
     width: 20px;
     top: 29px;
