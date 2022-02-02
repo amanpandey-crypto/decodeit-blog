@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+        <!-- site content
+        ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+
+                <section class="column large-full entry format-standard">
+
+                    <div class="media-wrap">
+                        <div>
+                            <img src="{% static 'images/thumbs/contact/contact1.jpg' %}"  alt="">
+                        </div>
+                    </div>
+                    {% if message_name %}
+                    <div>
+                        <h2>Hey -{{ message_name }}</h2>
+                        <p>Thank you for showing interest. We will reach to you soon...</p>
+                    </div>
+                    {% else %}
+                    <div class="content__page-header">
+                        <h1 class="display-1">
+                            Contact us
+                        </h1>
+                    </div> <!-- end content__page-header -->
+
+                    <p class="lead drop-cap">
+                    First web appliction Using Django framework. No...no don't think this is the first web app.
+                    I just want to say that this is the first web app done by me. When I was doing training
+                    internship with verzeo, an e-learning company, I made this appliction as a major project.
+                    I enjoyed the whole development period. But, this app is not completely developed. Still
+                    developing, If you want me to add some feature to it please contact us.
+                    </p>
+
+                    <p>
+                      If anyone wants to add articles to this website. Fill the contact form and send the message
+                      related your topic. I would reply to you ASAP....
+                    </p>
+
+                    <div class="row">
+                        <div class="column large-six tab-full">
+                            <h4>Address</h4>
+
+                            <p>
+                            IIIT D&M, kancheepuram<br>
+                            kandigai, Chennai-600127<br>
+                            Tamil Nadu, India.
+                            </p>
+
+                        </div>
+
+                        <div class="column large-six tab-full">
+                            <h4>Contact Info</h4>
+
+                            <p>pandeyaman87@gmail<br>
+                            Phone: +91 8651297204
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <h3 class="h2">Contact Form - {{ message_name }}</h3>
+
+                       <form name="contactForm" id="contactForm" method="post" action="{% url 'contact' %}" autocomplete="off">
+                       {% csrf_token %}
+                        <fieldset>
+
+                            <div class="form-field">
+                                <input name="cName" id="cName" class="full-width" placeholder="Your Name" value="" type="text">
+                            </div>
+
+                            <div class="form-field">
+                                <input name="cEmail" id="cEmail" class="full-width" placeholder="Your Email" value="" type="text">
+                            </div>
+
+                            <div class="message form-field">
+                                <textarea name="cMessage" id="cMessage" class="full-width" placeholder="Your Message"></textarea>
+                            </div>
+
+                            <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large full-width" value="Send Message" type="submit">
+
+                        </fieldset>
+                    </form> <!-- end form -->
+                </section>
+{% endif %}
+            </main>
+
+        </div> <!-- end s-content -->
+
+{% endblock content %}
