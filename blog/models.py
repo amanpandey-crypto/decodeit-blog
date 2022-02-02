@@ -11,8 +11,8 @@ class Post(models.Model):
         ('Movies', 'Movies'),
         ('Health', 'Health')
     )
-    cover = models.URLField(null=True)
-    cover2 = models.URLField(null=True)
+    cover = models.URLField(null=True, default='https://upload.wikimedia.org/wikipedia/commons/3/3e/Image_needed_LHB.png')
+    cover2 = models.URLField(null=True, default='https://www.onlygfx.com/wp-content/uploads/2017/11/grunge-question-mark-cover.png')
     title = models.CharField(max_length=2000)
     slug = models.SlugField(default='')
     author = models.CharField(max_length=2000, default='')
