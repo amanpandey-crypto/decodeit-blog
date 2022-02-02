@@ -4,7 +4,7 @@ Used Django rest framework for POST and GET request for creating blog.
 **Local Setup**
 ---
 *Requirements:- Python 3.8+*<br>
-1) `git clone https://github.com/amanpandey-crypto/djangoapp`
+1) `git clone https://github.com/amanpandey-crypto/decodeit-blog`
 (For Contrituber: Use your Forked URL)
 2) `cd djangoapp`
 3) `python -m venv env`
